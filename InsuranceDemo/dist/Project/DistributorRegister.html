@@ -1,0 +1,288 @@
+﻿<div class="container-fluid">
+    <div class="card card-custom gutter-b example example-compact">
+        <div class="card-header">
+            <h3 class="card-title">Application for Aggregator</h3>
+            <!--<div class="d-flex flex-column text-right pr-3">
+                <span class="caption">IDV value : <label id="idvvalue"></label></span>
+            </div>-->
+
+        </div>
+
+        <div class="example-preview">
+            <div class="row">
+                <div class="col-3">
+                    <ul class="nav flex-column nav-pills">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active" id="home-tab-5" data-toggle="tab" href="#attachdoc">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-chat-1"></i>
+                                </span>
+                                <span class="nav-text">Attach Document</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link " id="profile-tab-5" data-toggle="tab" href="#personalinfo" aria-controls="profile">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-layers-1"></i>
+                                </span>
+                                <span class="nav-text">Personal Info</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-5" data-toggle="tab" href="#Vechilinfo" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Distributor Info</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-5" data-toggle="tab" href="#IDV" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Contact Info</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-5" data-toggle="tab" href="#save" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Save & Submit</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <form id="distreg">
+                        <div class="tab-content" id="myTabContent5">
+                            <div class="tab-pane fade" id="attachdoc" role="tabpanel" aria-labelledby="home-tab-5">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_1">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden" name="profile_avatar_remove" />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_2">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file" name="profile_avatar2" accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden" name="profile_avatar_remove" />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_3">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file" name="profile_avatar3" accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden" name="profile_avatar_remove" />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_4">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file" name="profile_avatar4" accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden" name="profile_avatar_remove" />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="tab-pane fade active show" id="personalinfo" role="tabpanel" aria-labelledby="profile-tab-5">
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span>Organisation Name</span>
+                                        <select name="P_OrganizationCode" id="P_OrganizationCode" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="ORG04">Lifestyle Protection Plus</option>
+                                            <option value="ORG04">Orient</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblEmiratesID" class="caption mandatory">Aggregator Name</span>
+                                        <input name="P_DistributorDescription" type="text" maxlength="20" id="P_DistributorDescription" class="form-control" PlaceHolder="Name" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblInsuredame" class="caption mandatory">Aggregator Short Name</span>
+                                        <input name="P_DistributorShortName" type="text" id="P_DistributorShortName" placeholder="* short Name" class="form-control " />
+
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span>Effective Date</span>
+                                        <input name="DOBdriver" type="date" id="DOBdriver" placeholder="* Date of Birth-Driver" class="form-control" />
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span>Product </span>
+                                        <select name="P_ProductId" id="P_ProductId" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="1">Lifestyle Protection Plus</option>
+                                            <option value="2">Orient</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblEmailAddress">Address 1</span>
+                                        <input name="P_Address1" type="text" maxlength="100" id="P_Address1" class="form-control" placeholder="* Address1" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label5">Address 2</span>
+                                        <input name="P_Address2" type="text" maxlength="100" id="P_Address2" class="form-control" placeholder="* Address 2" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label5">PostBox</span>
+                                        <input name="P_POBox" type="number" maxlength="10" id="P_POBox" placeholder="* PostBox" class="form-control" />
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblDrivingLicenseEmirates">Country</span>
+                                        <select name="P_Country" id="P_Country" class="form-control" PlaceHolder="* City">
+                                            <option value="0">--Select--</option>
+                                            <option value="1">Abu Dhabi</option>
+                                            <option value="2">Ajman</option>
+                                            <option value="3">Dubai</option>
+                                            <option value="4">Fujairah</option>
+                                            <option value="5">Ras Al Khaimah</option>
+                                            <option value="6">Sharjah</option>
+                                            <option value="7">Umm Al Quwain</option>
+
+                                        </select>
+                                    </div>
+                                   
+
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Vechilinfo" role="tabpanel" aria-labelledby="contact-tab-5">
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblChassissNo">Aggregator Email</span>
+                                        <input name="P_EmailId" type="email" maxlength="17" class="form-control" id="P_EmailId" PlaceHolder="*email" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label24">Password</span>
+                                        <input name="P_Password" type="password" maxlength="17" class="form-control" id="P_Password" PlaceHolder="* Password" />
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="tab-pane fade" id="IDV" role="tabpanel" aria-labelledby="contact-tab-5">
+                                <div id="idvcal">
+                                    <div class="form-group row">
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblVehicleMake">Contact Name</span>
+                                            <input name="P_Name1" type="text" maxlength="17" class="form-control" id="P_Name1" PlaceHolder="*Contact name" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblVehicleModel">Contact Email </span>
+                                            <input name="P_Email1" type="email" maxlength="17" class="form-control" id="P_Email1" PlaceHolder="*email" />
+                                        </div>
+
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_Label32">Telephone</span>
+                                            <input name="P_Tel1" type="number" id="P_Tel1" class="form-control" placeholder="* Telephone" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_Label32">Mobile</span>
+                                            <input name="P_Mobile1" type="number" id="P_Mobile1" class="form-control" placeholder="* Mobile" />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="save" role="tabpanel" aria-labelledby="contact-tab-5">
+
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+
+                                    </div>
+                                    <div class="col-lg-3">
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        
+                                        <button type="submit" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Generate Distributor</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <script>
+                $("#distreg").validate({
+                rules: {
+                    P_DistributorShortName: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 20
+                    },
+                    
+                    //For custom messages
+                    messages: {
+                        P_DistributorShortName: {
+                            required: "Enter Benefit Code",
+                            minlength: "Enter at least 5 characters"
+                        }
+                       
+
+
+                    },
+
+                }, submitHandler: function (form) {
+                    distributorInsert();
+                },
+            });
+
+            getvechilemake();
+            var avatar1 = new KTImageInput('kt_image_1');
+            var avatar2 = new KTImageInput('kt_image_2');
+            var avatar3 = new KTImageInput('kt_image_3');
+            var avatar4 = new KTImageInput('kt_image_4');
+            </script>
+        </div>
+    </div>
+</div>

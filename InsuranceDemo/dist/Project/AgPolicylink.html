@@ -1,0 +1,171 @@
+﻿<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Policy Link</h3>
+        </div>
+        <div class="card-body">
+           
+                <div class="form-group row">
+                    <div class="col-lg-3">
+                        <input type="text" class="form-control" hidden id="agentid" readonly="readonly" name="agentid" />
+                    </div>
+                    <div class="col-lg-3">
+                        <span id="cphMain_lblEmiratesID" class="caption mandatory">Quote Number</span>
+                        <input type="text" onchange="$('#pnum').val('');" class="form-control" id="qnum"  name="qnum" />
+                    </div>
+                    <div class="col-lg-3">
+                        <span id="cphMain_lblEmiratesID" class="caption mandatory">Policy Number</span>
+                        <input type="text" onchange="$('#qnum').val('');" class="form-control" id="pnum"  name="pnum" />
+                    </div>
+                </div>
+            <div class="form-group row">
+                <div class="table-responsive ">
+                    <table id="Qexample" class="display table table-hover table-striped table-bordered" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>CustomerName</th>
+                                <th>QuotationId</th>
+                                <th>PolicyNumber</th>
+                                <th>TotalPremium</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody id="QdivResult"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button onclick="search()" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Search</button>
+        </div>
+    </div>
+</div>
+<script>
+    $("#agentid").val(localStorage.getItem("AgentID"));
+    var agid =  $("#agentid").val();
+    var x;
+    var qNum;
+    var PNum;
+    function search() {
+        var agid =  $("#agentid").val();
+         qNum = $("#qnum").val();
+         PNum = $("#pnum").val();
+        if (qnum != "" || qnum!= 0 )
+        {
+            x = 1;
+            $.ajax(
+        {
+            type: "POST",
+            cache: false,
+            crossDomain: "true",
+            url: baseurl + "/api/GetQuotation/list?QuotationId=" + qNum,
+            beforeSend: function () {
+                $("#claimdivResult").html("<tr><td colspan='5'> Loading!</td> </tr>");
+            },
+            success: function (data) {
+                console.log(data);
+                dataagenttransgrid(data);
+              
+            },
+            dataType: "json"
+        });
+        }
+        if (PNum != "" || PNum != 0) {
+            x=2
+
+            $.ajax(
+        {
+            type: "POST",
+            cache: false,
+            crossDomain: "true",
+            url: baseurl + "/api/GetPolicymotor/list?policynumber=" + PNum,
+            beforeSend: function () {
+                $("#QdivResult").html("<tr><td colspan='5'> Loading!</td> </tr>");
+            },
+            success: function (data) {
+                console.log(data);
+                dataagenttransgrid(data);
+            },
+            dataType: "json"
+        });
+        }
+
+    }
+    function dataagenttransgrid(list) {
+        qNum = $("#qnum").val();
+        PNum = $("#pnum").val();
+        grdGetEnquiry = '';
+        $.each(list, function (index, item) {
+            grdGetEnquiry += "<tr> <td>" + item.CustomerName + "</td> <td><span>" + item.QuotationId + "</span></td><td>" + item.PolicyNumber + "</td><td>" + item.TotalPremium + "</td><td><a class='btn btn-primary btn-shadow-hover font-weight-bold mr-2 link ''>Link</a></td>";
+        });
+        $("#QdivResult").html(grdGetEnquiry);
+       
+        $('.link').click(function () {
+            swal.fire({
+                text: "Linked successfully",
+                icon: "success",
+                buttonsStyling: false,
+                confirmButtonText: "Ok, got it!",
+                confirmButtonClass: "btn font-weight-bold btn-light-primary"
+            }).then(function () {
+              
+                if(x == 1)
+                {
+                   
+                    $.ajax(
+{
+    type: "POST",
+    cache: false,
+    crossDomain: "true",
+    url: baseurl + "/api/UpdateQuotatiobyagent/list?agentId=" + agid + "&quotationId=" + qNum,
+    success: function (data) {
+        console.log(data);
+    },
+    dataType: "json"
+});
+                    x = 0;
+                }
+               else if (x == 2)
+                {
+                   $.ajax(
+     {
+         type: "POST",
+         cache: false,
+         crossDomain: "true",
+         url: baseurl + "/api/Updatepolicybyagent/list?agentId=" + agid + "&policynumber=" + PNum,
+         success: function (data) {
+             console.log(data);
+         },
+         dataType: "json"
+     });
+                    x = 0;
+                }
+
+
+
+            });
+        });
+    }
+    function linkquote(qNum) {
+        alert(agid);
+        alert(qNum);
+        $.ajax(
+ {
+     type: "POST",
+     cache: false,
+     crossDomain: "true",
+     url: baseurl + "/api/UpdateQuotatiobyagent/list?agentId=" + agid + "&quotationId=" + qNum,
+     success: function (data) {
+         console.log(data);
+     },
+     dataType: "json"
+ });
+       
+    }
+    function linkpolicy(p) {
+       
+      
+    }
+
+
+</script>

@@ -1,0 +1,157 @@
+﻿<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Motor Insurance Claim</h3>
+        </div>
+        <div class="card-body">
+            <div class="example-preview">
+                <div class="row">
+                    <div class="col-2">
+                        <ul class="nav flex-column nav-pills">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link active" id="profile-tab-5" data-toggle="tab" href="#claiminfo" aria-controls="profile">
+                                    <span class="nav-icon">
+                                        <i class="flaticon2-layers-1"></i>
+                                    </span>
+                                    <span class="nav-text">Claim Info</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="update-tab-5" data-toggle="tab" href="#updateinfo" aria-controls="contact">
+                                    <span class="nav-icon">
+                                        <i class="flaticon2-rocket-1"></i>
+                                    </span>
+                                    <span class="nav-text">Update Info</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab-7" data-toggle="tab" href="#save" aria-controls="contact">
+                                    <span class="nav-icon">
+                                        <i class="flaticon2-rocket-1"></i>
+                                    </span>
+                                    <span class="nav-text">Update</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-10">
+                       
+                            <div class="tab-content" id="myTabContent5">
+                                <div class="tab-pane fade active show " id="claiminfo" role="tabpanel" aria-labelledby="profile-tab-5">
+                                    <div class="form-group row">
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblEmiratesID" class="caption mandatory">Vechile Number</span>
+                                            <input name="Vehiclenumber" type="text" readonly="readonly" id="vechilenum" class="form-control" PlaceHolder="* Vechile Number" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblEmiratesID" class="caption mandatory">Policy Number</span>
+                                            <input name="Policynumber" type="text" readonly="readonly" id="Policynumber" class="form-control" PlaceHolder="* Vechile Number" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblEmiratesID" class="caption mandatory">FIR Number</span>
+                                            <input name="FIRnumber" type="text" readonly="readonly" maxlength="20" id="firnum" class="form-control" PlaceHolder="* FIR Number" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblMobileNo">Mobile No</span>
+                                            <input name="mobileno" type="text" readonly="readonly" maxlength="12" id="MobileNo" class="form-control" placeholder="* 971xxxxxxx" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-9">
+                                            <span id="cphMain_lblInsuredame" class="caption mandatory">Accident Description</span>
+                                            <textarea name="Descrption" type="text" readonly="readonly" id="Descrption" row="3" placeholder="* Accident desciption" class="form-control " />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade " id="updateinfo" role="tabpanel" aria-labelledby="update-tab-5">
+                                    <div class="form-group row">
+                                        <div class="col-lg-3">
+                                            <span  class="caption mandatory">Quote Amount</span>
+                                            <input name="amount" type="text" id="amount" readonly="readonly" class="form-control" PlaceHolder="* Quote Amount" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span  class="caption mandatory">Inspection Date</span>
+                                            <input name="surveydate" type="date" id="surveydate" class="form-control" />
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblEmiratesID" class="caption mandatory">Approved Amount</span>
+                                            <input name="Revisedamount" type="text"  id="Revisedamount" class="form-control" PlaceHolder="* Approved Amounr Number" />
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-lg-9">
+                                            <span id="cphMain_lblInsuredame" class="caption mandatory">Inspection Description</span>
+                                            <textarea name="Accidentdesc" type="text" id="Accidentdesc" row="3" placeholder="* Accident desciption" class="form-control " />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-pane fade" id="save" role="tabpanel" aria-labelledby="contact-tab-7">
+
+                                    <div class="form-group row">
+                                        <div class="col-lg-3">
+
+                                        </div>
+                                        <div class="col-lg-3">
+
+                                        </div>
+                                        <div class="col-lg-3">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <button onclick="updateclaim();" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Update claim</button>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                       
+                    </div>
+
+                </div>
+                <script>
+                   
+                    getClaimnum(ID);
+                    function updateclaim() {
+                        
+                        var Descrption = $('#Accidentdesc').val();
+                        var Revisedamount = $('#Revisedamount').val();
+                        var amount = $('#amount').val();
+                        var surveydate = $('#surveydate').val()
+                        if (Descrption == undefined || Descrption == null || Descrption == "")
+                        {
+                            Descrption = 0;
+                        }
+                        if (Revisedamount == undefined || Revisedamount == null || Revisedamount == "") {
+                            Revisedamount = 0;
+                        }
+                       
+                        $.ajax(
+                            {
+                                type: "POST",
+                                cache: false,
+                                crossDomain: "true",
+                                url: baseurl + "/api/InsertClaimdetail/Insert?claimno="+ID+"&Descrption="+Descrption+"&amount="+amount+"&surveydate="+surveydate+"&Revisedamount="+Revisedamount,
+                                success: function (data) {
+                                    console.log(data);
+                                    swal.fire({
+                                        text: "Claim Updated successfully",
+                                        icon: "success",
+                                        buttonsStyling: false,
+                                        confirmButtonText: "Ok, got it!",
+                                        confirmButtonClass: "btn font-weight-bold btn-light-primary"
+                                    }).then(function () {
+                                        
+                                    });
+                                },
+                                dataType: "json"
+                            });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>

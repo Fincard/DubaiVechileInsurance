@@ -1,0 +1,72 @@
+﻿<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Distributor Agent</h3>
+        </div>
+        <div class="card-body">
+
+            
+            <div class="form-group row">
+                <div class="table-responsive ">
+                    <table id="Qexample" class="display table table-hover table-striped table-bordered" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>AgentCode</th>
+                                <th>AgentName</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody id="QdivResult"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button onclick="search()" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Search</button>
+        </div>
+    </div>
+</div>
+<script>
+   
+   
+    var x;
+    var qNum;
+    var PNum;
+    function search() {
+        
+         qNum = "DC_100";
+            $.ajax(
+            {
+            type: "GET",
+            cache: false,
+            crossDomain: "true",
+            url: baseurl + "/api/GetagentbyDistribution/list?distid=" + qNum,
+            beforeSend: function () {
+                $("#claimdivResult").html("<tr><td colspan='5'> Loading!</td> </tr>");
+            },
+            success: function (data) {
+                console.log(data);
+                dataagenttransgrid(data);
+
+            },
+            dataType: "json"
+        });
+        
+       
+
+    }
+    function dataagenttransgrid(list) {
+        
+        grdGetEnquiry = '';
+        $.each(list, function (index, item) {
+            grdGetEnquiry += "<tr> <td>" + item.P_AgentCode + "</td> <td><span>" + item.P_ProductCode + "</span></td></tr>";
+        });
+        $("#QdivResult").html(grdGetEnquiry);
+
+       
+    }
+    
+    
+
+
+</script>

@@ -1,0 +1,117 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <form id="producttype">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Product Type</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-lg-3">
+                                <label>Policy Name:</label>
+                                <select name="P_Policyname" id="P_Policyname" class="form-control  VehicleMake" ></select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label>Product Name:</label>
+                                <input type="text" id="P_ProductTypeName" autocomplete="off" name="P_ProductTypeName" class="form-control">
+                            </div>
+                            <div class="col-lg-3">
+                                <label>Product Code:</label>
+                                <input type="text" id="P_UserID" autocomplete="off" name="P_UserID" class="form-control">
+                            </div>
+                            <div class="col-lg-3">
+                                <label>Reference Name:</label>
+                                <input type="text" id="P_ReferenceNo" autocomplete="off" name="P_ReferenceNo" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-8">
+                                <button type="submit" id="btnsubmit" class="btn btn-primary mr-2">Submit</button>
+                                <button type="reset" class="btn btn-secondary">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">View Product Type</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive ">
+                        <table id="example" class="display table table-hover table-striped table-bordered" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Sl.No</th>
+                                    <th>Product Type</th>
+                                    <th>Product Code</th>
+                                    <th>Reference Name</th>
+                                    <!--<th>Delete</th>-->
+                                </tr>
+                            </thead>
+                            <tbody id="divResult"></tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        productView();
+        drpDist();
+        $("#producttype").validate({
+            rules: {
+                P_ProductTypeName: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 20
+                },
+                P_Policyname: {
+                    required: true,
+                },
+                P_UserID: {
+                    required: true,
+                    
+                    maxlength: 20,
+                    digits: true
+                },
+                P_ReferenceNo: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 20,
+                },
+                //For custom messages
+                messages: {
+                    P_ProductTypeName: {
+                        required: "Enter Product type name",
+                        minlength: "Enter at least 5 characters"
+                    },
+                    P_Policyname: {
+                        required: "P_Distributor Code",
+                       
+                    },
+                    P_UserID: {
+                            required: "Enter Product code",
+                            minlength: "Only in numbers"
+                    },
+                    P_ReferenceNo: {
+                        required: "Enter P_Reference No",
+                        minlength: "Enter at least 5 characters"
+                    }
+                },
+
+            }, submitHandler: function (form) {
+                productInsert();
+            },
+        });
+        
+    </script>
+</div>

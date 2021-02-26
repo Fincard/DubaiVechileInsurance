@@ -1,0 +1,72 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4">
+            <!--begin::Stats Widget 1-->
+            <div class="card card-custom bgi-no-repeat gutter-b card-stretch" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-4.svg)">
+                <!--begin::Body-->
+                <div class="card-body">
+                    <a  class="card-title font-weight-bold text-muted text-hover-primary font-size-h5">Dial Our Toll Number</a>
+                    <div class="font-weight-bold text-success mt-9 mb-5"></div>
+                    <br />
+                    <p class="text-dark-75 font-weight-bolder font-size-h5 m-0">
+                        000-000000
+                       
+                    </p>
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Stats Widget 1-->
+        </div>
+        <div class="col-xl-4">
+            <!--begin::Stats Widget 2-->
+            <div class="card card-custom bgi-no-repeat gutter-b card-stretch" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-2.svg)">
+                <!--begin::Body-->
+                <div class="card-body">
+                    <a class="card-title font-weight-bold text-muted text-hover-primary font-size-h5">Email us on</a>
+                    <div class="font-weight-bold text-success mt-9 mb-5"></div>
+                    <p class="text-dark-75 font-weight-bolder font-size-h5 m-0">
+                        Demo@fincardtechnologies.com
+                    </p>
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Stats Widget 2-->
+        </div>
+        <div class="col-xl-4">
+            <!--begin::Stats Widget 3-->
+            <div class="card card-custom bgi-no-repeat gutter-b card-stretch" style="background-position: right top; background-size: 30% auto; background-image: url(assets/media/svg/shapes/abstract-1.svg)">
+                <!--begin::body-->
+                <div class="card-body">
+                    <a href="#" class="card-title font-weight-bold text-muted text-hover-primary font-size-h5">Register Online</a>
+                    <div class="font-weight-bold text-success mt-9 mb-5"></div>
+                    <p class="text-dark-75 font-weight-bolder font-size-h5 m-0">
+                        <a onclick="checkid()" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Claim Online</a>
+                    </p>
+                </div>
+                <!--end::Body-->
+            </div>
+            <!--end::Stats Widget 3-->
+        </div>
+    </div>
+</div>
+<script>
+    function checkid()
+    {
+        if (localStorage.getItem("Roleid") == 4)
+        {
+            location.href = '#/Motorclaimregister/';
+        }
+        else{
+            swal.fire({
+                text: "Sorry, Please login",
+                icon: "error",
+                buttonsStyling: false,
+                confirmButtonText: "Ok, got it!",
+                confirmButtonClass: "btn font-weight-bold btn-light"
+            }).then(function () {
+                location.href = '../dist/Login.html'
+            });
+        }
+
+    }
+</script>

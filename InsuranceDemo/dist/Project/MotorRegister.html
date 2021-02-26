@@ -1,0 +1,580 @@
+﻿<div class="container-fluid">
+    <div class="card card-custom gutter-b example example-compact">
+        <div class="card-header">
+            <h3 class="card-title">Application for Motor</h3>
+            <div class="d-flex flex-column text-right pr-3">
+                <!--<span class="caption">IDV value : <label id="idvvalue"></label></span>-->
+            </div>
+               
+            </div>
+
+        <div class="example-preview">
+            <div class="row">
+                <div class="col-2">
+                    <ul class="nav flex-column nav-pills">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active" id="home-tab-5" data-toggle="tab" href="#attachdoc">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-chat-1"></i>
+                                </span>
+                                <span class="nav-text">Attach Document</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link " id="profile-tab-5" data-toggle="tab" href="#personalinfo" aria-controls="profile">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-layers-1"></i>
+                                </span>
+                                <span class="nav-text">Personal Info</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-5" data-toggle="tab" href="#Vechilinfo" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Vechile Info</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-6" data-toggle="tab" href="#IDV" aria-controls="contact1">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">IDV calculation</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-7" data-toggle="tab" href="#save" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Save & Submit</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10">
+                    <form id="motorregster">
+                        <div class="tab-content" id="myTabContent5">
+                            <div class="tab-pane fade active show" id="attachdoc" role="tabpanel" aria-labelledby="home-tab-5">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_1">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file" accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden" />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_2">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file"  accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden"  />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_3">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file"  accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden"  />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="image-input image-input-outline" id="kt_image_4">
+                                            <div class="image-input-wrapper"></div>
+                                            <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                <i class="fa fa-pen icon-sm text-muted"></i>
+                                                <input type="file"  accept=".png, .jpg, .jpeg" />
+                                                <input type="hidden"  />
+                                            </label>
+                                            <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade " id="personalinfo" role="tabpanel" aria-labelledby="profile-tab-5">
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span>Insured Type</span>
+                                        <select name="Insuredtype" id="Insuredtype" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="Individual">Individual</option>
+                                            <option value="Corporate">Corporate</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblEmiratesID" class="caption mandatory">Emirates ID</span>
+                                        <input name="EmiratesID" type="text" maxlength="20" id="EmiratesID" class="form-control" PlaceHolder="* Emirates ID No(999-9999-9999999-9)" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblInsuredame" class="caption mandatory">Insured Name</span>
+                                        <input name="InsuredName" type="text" id="InsuredName" placeholder="* Insured Name" class="form-control " />
+
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span>Date of Birth-Driver</span>
+                                        <input name="DOBdriver" type="date" id="DOBdriver" placeholder="* Date of Birth-Driver" class="form-control" />
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblMobileNo">Mobile No</span>
+                                        <input name="MobileNo" type="text" maxlength="12" id="MobileNo" class="form-control" placeholder="* 971xxxxxxx" />
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblEmailAddress">Email Id</span>
+                                        <input name="EmailAddress" type="email" maxlength="100" id="EmailAddress" class="form-control" placeholder="* name@email.com" />
+                                    </div>
+                                   
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label5">PostBox</span>
+                                        <input name="postbox" type="text" maxlength="5" id="postbox" placeholder="* PostBox" class="form-control" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblDrivingLicenseEmirates">City</span>
+                                        <select name="City" id="City" class="form-control" PlaceHolder="* City">
+                                            <option value="0">--Select--</option>
+                                            <option value="Abu Dhabi">Abu Dhabi</option>
+                                            <option value="Ajman">Ajman</option>
+                                            <option value="Dubai">Dubai</option>
+                                            <option value="Fujairah">Fujairah</option>
+                                            <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                                            <option value="Sharjah">Sharjah</option>
+                                            <option value="Umm Al Quwain">Umm Al Quwain</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--<div class="form-group row">
+                                  
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label5">Bank Name</span>
+                                        <input name="Bnk" type="text" maxlength="100" id="Bnk" class="form-control" placeholder="* Bank Name" />
+                                    </div>
+
+
+                                </div>-->
+                            </div>
+                            <div class="tab-pane fade" id="Vechilinfo" role="tabpanel" aria-labelledby="contact-tab-5">
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <input name="BuisnessActivity" id="BuisnessActivity" value="0" hidden />
+                                        <input name="userId" id="userId" hidden />
+                                        <span id="cphMain_lblChassissNo">Chassis No</span>
+                                        <input name="ChassissNo" type="text" maxlength="17" class="form-control" id="ChassissNo" PlaceHolder="* Chassis No" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label24">Policy type</span>
+                                        <select name="PrevPolType" id="PrevPolType" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="Comprehensive">Comprehensive</option>
+                                            <option value="ThirdParty">Third Party</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label23">Exp. Dt of Current Insurance </span>
+                                        <input name="InsExpDate_rtxtDate" type="date" class="form-control" id="InsExpDate_rtxtDate" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblBodyType">Body Type</span>
+                                        <select name="BodyType" id="BodyType" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="100">TRUCK WITH SKIP LOADER</option>
+                                            <option value="0104">ROAD CONCRETE MIXER</option>
+                                            <option value="0105">ROAD TANKER - GAS</option>
+                                            <option value="0106">ROAD TANKER - OIL</option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblCylindercapacity">Cylinder Capacity</span>
+                                        <select name="Cylindercapacity" id="Cylindercapacity" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="4">4 CYLINDERS</option>
+                                            <option value="6">6 CYLINDERS</option>
+                                            <option value="8">8 CYLINDERS</option>
+                                           
+
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblLoadingCap">Loading Capacity</span>
+                                        <select name="LoadCapacity" id="LoadCapacity" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="1TON">1 TON</option>
+                                            <option value="2TON">2 TON</option>
+                                            <option value="3TON">3 TON</option>
+                                            <option value="4TON">4 TON</option>
+                                            <option value="5TON">5 TON</option>
+                                            <option value="7TON">7 TON</option>
+                                            <option value="ABOVE7TON">ABOVE 7 TON</option>
+                                            <option value="NOTAPPLICABLE">NOT APPLICABLE</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblEngineCapacity">Engine Number</span>
+                                        <input name="EngineCapacity" type="text" value="0" id="EngineCapacity" class="form-control" PlaceHolder="* Engine Number" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblYearReg">Date of First Regn</span>
+                                        <input name="RegDate" type="date" id="RegDate" class="form-control" />
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+
+                                    
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblVehicleUsage">Vehicle Usage</span>
+                                        <select name="VehicleUsage" id="VehicleUsage" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="1">Commercial Vehicle</option>
+                                            <option value="2">Motor Cycle</option>
+                                            <option value="3">Private Vehicle</option>
+                                            <option value="4">Rent-a-Car</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+
+                                        <span id="cphMain_lblGallons">Gallons</span>
+                                        <select name="Gallons" id="Gallons" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="1">1 TO 2000 GALLONS</option>
+                                            <option value="2001">2001 TO 5000 GALLONS</option>
+                                            <option value="ABOVE5000">ABOVE 5000 GALLONS</option>
+                                            <option value="NOTAPPLICABLE">NOT APPLICABLE </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblNoClaimCertificateYN">No Claim Certificate</span>
+                                        <select name="NCB" id="NCB" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="0">No</option>
+                                            <option value="1">One Year</option>
+                                            <option value="2">Two Year</option>
+                                            <option value="3">Three Year</option>
+                                            <option value="4">Four Year</option>
+                                            <option value="5">Five Year</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblNumberofPassengers">No. of Passenger </span>
+                                        <input name="NumberofPassengers" class="form-control" type="text" id="NumberofPassengers" placeholder="* Number of Passengers incl driver" class="form-control " />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                   
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblEngineCapacity">Color </span>
+                                        <input  type="text" id="Color" class="form-control" PlaceHolder="* Color" />
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblVehicleValue">Vehicle Number</span>
+                                        <input name="Vehiclenumber" class="form-control" type="text" id="Vehiclenumber" placeholder="* Vehicle Number (AA-00000)" />
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblRentCarDays">Rent a Car Days</span>
+                                        <select name="RentCarDays" id="RentCarDays" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="7">7 Days</option>
+                                            <option value="14">14 Days</option>
+                                            <option value="10">10 Days</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+
+                                        <span id="cphMain_lblGeographicArea">Geographical Area</span>
+                                        <select name="GeographicArea" id="GeographicArea" class="form-control">
+                                            <option value="0">* Geographical Area</option>
+                                            <option value="1">United Arab Emirates</option>
+                                            <option value="2">United Arab Emirates + Oman</option>
+                                            <option value="2">United Arab Emirates + Bahrain</option>
+                                        </select>
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblAgencyRepairYn">Agency Repair</span>
+                                        <input id="AgencyRepair" type="checkbox" name="AgencyRepair" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label19">AAA Cover</span>
+                                        <input id="AAA" type="checkbox" name="AAA" />
+                                    </div>
+                                    <div class="col-lg-3">
+
+                                        <span id="cphMain_lblDrivinglicenseExp">UAE Driving experience (in years)</span>
+                                        <select name="DrivinglicenseExp" id="DrivinglicenseExp" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="1">Less than 1 year</option>
+                                            <option value="2">More than 1 year</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_lblHomeCountryDrvLicenseExp">Home country Driving experience</span>
+                                        <select name="HomeCountryDrvLicenseExp" id="HomeCountryDrvLicenseExp" class="form-control">
+                                            <option selected="selected" value="0">--Select--</option>
+                                            <option value="Less2">Less than 2 Years </option>
+                                            <option value="More2">More than 2 Years </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <span id="cphMain_Label22">Brand New</span>
+                                        <input id="BrandNewYn" type="checkbox" name="BrandNewYn" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="IDV" role="tabpanel" aria-labelledby="contact-tab-6">
+                                <div id="idvcal">
+                                    <div class="form-group row">
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblVehicleMake">Vehicle Make</span>
+                                            <select name="VehicleMake" id="VehicleMake" class="form-control  VehicleMake" PlaceHolder="* Vehicle Make" onchange="getvechilemodel(this);"></select>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblVehicleModel">Vehicle Model</span>
+                                            <select name="VechilemodelId" id="VechilemodelId" class="form-control  VechilemodelId" PlaceHolder="* Vehicle Model"></select>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <span id="cphMain_lblModelYear">Model Year</span>
+                                            <select name="ModelYear" id="ModelYear" onchange="InsertcustomerVechineData();" class="form-control">
+                                                <option selected="selected" value="0">--Select--</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                                <option value="1999">1999</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1995">1995</option>
+                                                <option value="1994">1994</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1992">1992</option>
+                                                <option value="1991">1991</option>
+                                                <option value="1990">1990</option>
+
+                                            </select>
+                                        </div>
+                                        <!--<div class="col-lg-3">
+                                            <span id="cphMain_Label32">Vehicle Price</span>
+                                            <input name="Vechileamount" type="text" id="Vechileamount" onchange="InsertcustomerVechineData();" class="form-control" placeholder="* Vehicle Price" />
+                                        </div>-->
+                                       
+                                    </div>
+                                    
+                                        <div class="form-group row">
+                                            <label class="col-form-label text-right col-lg-3 col-sm-12">IDV Value</label>
+                                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                                <div class="row align-items-center">
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control" readonly="readonly" onchange="IDVchange(this.value())"  id="kt_nouislider_1_input" placeholder="IDV value" />
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div id="kt_nouislider_1" onchange="IDVchange(this.value())" class="nouislider-drag-danger"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+
+                            
+                            
+
+                        </div>
+                            <div class="tab-pane fade" id="save" role="tabpanel" aria-labelledby="contact-tab-7">
+
+                                <div class="form-group row">
+                                    <div class="col-lg-3">
+
+                                    </div>
+                                    <div class="col-lg-3">
+
+                                    </div>
+                                    <div class="col-lg-3">
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <button type="submit" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Generate Quotaion</button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            </div>
+                    </form>
+        </div>
+       
+    </div>
+        <script>
+           
+            $("#userId").val(localStorage.getItem("P_UserID"));
+            $("#motorregster").validate({
+                
+                rules: {
+                    ModelYear: {
+                        required: true
+                    },
+
+                    RentCarDays: {
+                        required: true
+                    },
+                    GeographicArea: {
+                        required: true
+                    },
+                    Vehiclenumber: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 10
+                    },
+                    NumberofPassengers: {
+                        required: true,
+                        minlength:1,
+                        maxlength: 1,
+                        digits: true
+                    },
+                    NCB: {
+                required: true
+                        },
+                    Gallons: {
+                        required: true
+                    },
+                    VehicleUsage: {
+                        required: true
+                    },
+                    Insuredtype: {
+                        required: true
+                    },
+                    EmiratesID: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 10,
+                        digits: true
+                    },
+                    InsuredName: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 30
+                    },
+                    DOBdriver: {
+                        required: true,
+                    },
+                    MobileNo: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 8,
+                        digits: true
+                    },
+                    EmailAddress: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 30                        
+                    },
+                    postbox: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 5,
+                        digits:true
+                    },
+                    ChassissNo: {
+                        required: true,
+                        minlength: 17,
+                        maxlength: 17,
+                        digits:true
+                    },
+                    PrevPolType: {
+                        required: true
+                    },
+                    BodyType: {
+                        required: true
+                    },
+                    InsExpDate_rtxtDate: {
+                        required: true
+                    },
+                    Cylindercapacity: {
+                        required: true
+                    },
+                    LoadCapacity: {
+                        required: true
+                    },
+                    EngineCapacity: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 5,
+                        digits: true
+                    },
+                    RegDate: {
+                        required: true,
+                    },
+
+                    //For custom messages
+                    messages: {
+                    },
+
+                }, submitHandler: function (form) {
+                    VechileInsert();
+                },
+            });
+
+            getvechilemake();
+            var avatar1 = new KTImageInput('kt_image_1');
+            var avatar2 = new KTImageInput('kt_image_2');
+            var avatar3 = new KTImageInput('kt_image_3');
+            var avatar4 = new KTImageInput('kt_image_4');
+        </script>
+</div>
+</div>
+</div>

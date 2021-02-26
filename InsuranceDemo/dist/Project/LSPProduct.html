@@ -1,0 +1,110 @@
+﻿<div class="container" style="max-width:100%">
+    <style>
+        td {
+  word-wrap:break-word;
+}
+    </style>
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Cover Option</h4>
+            <div class="form-group">
+                <label class="radio radio-primary">
+                    <input type="radio" name="LSPgrid" id="hcb" checked="checked" onclick="getHCBList('HCB');" />Hospital Cash Benefit (HCB)
+                    <span></span>
+                </label>
+                <label class="radio radio-primary">
+                    <input type="radio" name="LSPgrid" onclick="getHCBList('ILOE');" /> Involuntary Loss of Employment (ILOE)
+                    <span></span>
+                </label>
+               
+              
+            </div>
+               
+            </div>
+        <div class="card-body">
+            <h4 class="card-title">Life Style Protection</h4>
+            <div class="table-responsive ">
+                <table id="example" class="display table table-hover table-striped table-bordered" cellspacing="0" >
+                    <thead>
+                        <tr>
+                            <th>Benefit Description/Plan Category</th>
+                            <th>Bronze</th>
+                            <th>Silver</th>
+                            <th>Gold</th>
+                            <th>Platinum</th>
+                        </tr>
+                    </thead>
+                    <tbody id="divResult"></tbody>
+                    <tfoot>
+                        <tr>
+                            <th><label class="radio radio-primary">
+    <input type="radio" name="payoptions" />Annually
+    <span></span>
+</label>
+<label class="radio radio-primary">
+    <input type="radio" name="payoptions" />Monthly
+    <span></span>
+</label></th>
+                            <th><a href="#/LSPRegister/"  class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Bronze</a></th>
+                            <th><a href="#/LSPRegister/" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Silver</a></th>
+                            <th><a href="#/LSPRegister/" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Gold</a></th>
+                            <th><a href="#/LSPRegister/" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Platinum</a></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <!--<div class="card-footer">
+            <h4 class="card-title">Payment Option</h4>
+                <label class="radio radio-primary">
+                    <input type="radio" name="payoptions" />Annually
+                    <span></span>
+                </label>
+                <label class="radio radio-primary">
+                    <input type="radio" name="payoptions" />Monthly
+                    <span></span>
+                </label>
+                <a onclick="btnBronze();" style="margin-left:50%" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Bronze</a>
+                <a href="#/LSPProduct/" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Silver</a>
+                <a href="#/LSPProduct/" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Gold</a>
+                <a href="#/LSPProduct/" class="btn btn-primary btn-shadow-hover font-weight-bold mr-2">Platinum</a>
+            </div>-->
+    </div>
+   
+</div>
+<script>
+    getHCBList('HCB');
+    function getHCBList(val) {
+        $.ajax(
+            {
+                type: "GET",
+                cache: false,
+                crossDomain: "true",
+                url: baseurl + "/api/GetProductCover/list?P_CoverOption="+val,
+                beforeSend: function () {
+                    $("#divResult").html("<tr><td colspan='5'> Loading!</td> </tr>");
+                },
+                success: function (data) {
+                    dataUomgrid(data);
+                },
+                dataType: "json"
+            });
+    }
+    function dataUomgrid(list) {
+        grdGetEnquiry = '';
+        $.each(list, function (index, item) {
+            grdGetEnquiry += "<tr> <td>" + item.P_BenefitDescription + "</td> <td><span>" + item.P_Bronze + "</span></td><td>" + item.P_Silver + "</td><td>" + item.P_Gold + "</td><td>" + item.P_Platinum + "</td>";
+            
+        });
+        $("#divResult").html(grdGetEnquiry);
+        $("#example").DataTable({
+            //paging: false,
+            //searching: false,
+            "bDestroy": true,
+            //dom: 'Bfrtip',
+            //buttons: [
+            //    'copy', 'csv', 'excel', 'pdf', 'print']
+        });
+    }
+   
+</script>

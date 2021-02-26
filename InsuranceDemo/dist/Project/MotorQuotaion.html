@@ -1,0 +1,325 @@
+﻿<div class="container-fluid">
+    <style>
+       
+    </style>
+    <div class="card card-custom overflow-hidden">
+        <div class="card-body p-0">
+            <!-- begin: Invoice-->
+            <!-- begin: Invoice header-->
+            <div class="row justify-content-center py-8 px-8 py-md-27 px-md-0">
+                <div class="col-md-9">
+                    <div class="d-flex justify-content-between pb-10 pb-md-20 flex-column flex-md-row">
+                        <h1 class="display-4 font-weight-boldest mb-10">ORIENT</h1>
+                        <div class="d-flex flex-column align-items-md-end px-0">
+                            <!--begin::Logo-->
+                            <a href="#" class="mb-5">
+                                <img src="../dist/assets/Img/Fincard_logo.png" />
+                                <!--<img src="assets/media/logos/logo-dark.png" alt="" />-->
+                            </a>
+                            <!--end::Logo-->
+                            <span class="d-flex flex-column align-items-md-end opacity-70">
+                                <span>Postbox 1243</span>
+                                <span>Dubai, UAE</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="border-bottom w-100"></div>
+                    <div class="d-flex justify-content-between pt-6">
+                        <div class="d-flex flex-column flex-root">
+                            <span class="font-weight-bolder mb-2">Date</span>
+                            <span class="opacity-70"><label id="date"></label></span>
+                        </div>
+                        <div class="d-flex flex-column flex-root">
+                            <span class="font-weight-bolder mb-2">Quotation NO.</span>
+                            <span class="opacity-70"><label id="quotationno"></label></span>
+                        </div>
+                        <div class="d-flex flex-column flex-root">
+                            <span class="font-weight-bolder mb-2">Address TO.</span>
+                            <span class="opacity-70">
+                                <label id="CustomerName"></label><br />
+                               <label id="customeraddress"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: Invoice header-->
+            <!-- begin: Invoice body-->
+            <div class="row justify-content-center py-8 px-8 py-md-10 px-md-0">
+                <div class="col-md-9">
+                    <div class="table-responsive">
+                        <table style="width: 100%;" class="table-bordered" >
+                            <tbody>
+                                <tr>
+                                    <td style="width: 40%;" colspan="2">
+                                        <p><strong>Cover Details :</strong></p>
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <p><strong>Yes/No</strong></p>
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <p><strong>لا / نعم</strong></p>
+                                    </td>
+                                    <td style="width: 40%;" colspan="2">
+                                        <p><strong>: تفاصيل التغطية</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Comprehensive Cover</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="comrecover"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p><strong>نعم</strong></p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Third Party Cover</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="thrparty"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Third party property damage (AED 2 million)</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="thrdamage"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p><strong>نعم</strong></p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Geographical cover &ndash; UAE only</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="geouae"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p><strong>نعم</strong></p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Personal Accident for Driver</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="personlacc"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Personal Accident for Passengers</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="personalacc"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Road side assistance</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="roadside"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p>&nbsp;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Replacement Car-Small</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="replacementcarsmall"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p>&nbsp;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Replacement Car-Medium</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="replacementcarmedium"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Replacement Car-Large</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="replacementcarlarge"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Geographical Extension -Oman,</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="georaphical"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Natura Hazzards</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="naturahazard"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p>&nbsp;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Windshield</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="Windshield"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Medical expense</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="Medical"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>Personal belongings</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p><label id="Personal"></label></p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p>لا</p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 479px;" colspan="2">
+                                        <p>&nbsp;</p>
+                                    </td>
+                                    <td style="width: 73px;">
+                                        <p>&nbsp;</p>
+                                    </td>
+                                    <td style="width: 26px;">
+                                        <p><strong>&nbsp;</strong></p>
+                                    </td>
+                                    <td style="width: 374px;" colspan="2">
+                                        <p>&nbsp;</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 134px;">
+                                        <p><strong>Total Premium (including VAT)</strong></p>
+                                    </td>
+                                    <td style="width: 506px;" colspan="4">
+                                        <p>AED <label id="Premium"></label></p>
+                                    </td>
+                                    <td style="width: 312px;"><strong>إجمالي الأقساط( بالدرهم) بما فيها</strong><strong>قيمة الضريبة المضافة</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- end: Invoice body-->
+            
+            <!-- begin: Invoice action-->
+            <div class="row justify-content-center py-8 px-8 py-md-10 px-md-0">
+                <div class="col-md-9">
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-light-primary font-weight-bold" onclick="window.print();">Download Quotation</button>
+                        
+                        <button type="button" onclick="paynow(ID);" class="btn btn-primary font-weight-bold" >Pay Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- end: Invoice action-->
+            <!-- end: Invoice-->
+        </div>
+    </div>
+</div>
+<script>
+   // console.log(ID);
+    getQuoteInfo(ID);
+</script>

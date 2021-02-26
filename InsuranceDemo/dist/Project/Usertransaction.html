@@ -1,0 +1,84 @@
+﻿<div class="container-fluid">
+    <div class="card card-custom gutter-b example example-compact">
+        <div class="card-header">
+            <h3 class="card-title">User Transaction</h3>
+            <div class="d-flex flex-column text-right pr-3">
+                <!--<span class="caption">IDV value : <label id="idvvalue"></label></span>-->
+            </div>
+
+        </div>
+
+        <div class="example-preview">
+            <div class="row">
+                <div class="col-2">
+                    <ul class="nav flex-column nav-pills">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" id="contact-tab-7" data-toggle="tab" href="#policy" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Policy </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-8" data-toggle="tab" href="#claim" aria-controls="contact">
+                                <span class="nav-icon">
+                                    <i class="flaticon2-rocket-1"></i>
+                                </span>
+                                <span class="nav-text">Claim </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="myTabContent5">
+                        <div class="tab-pane fade active show" id="policy" role="tabpanel" aria-labelledby="contact-tab-7">
+                            <div class="form-group row">
+                                <div class="table-responsive ">
+                                    <table id="example" class="display table table-hover table-striped table-bordered" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Policy Num</th>
+                                                <th>Premium Amount</th>
+                                                <th>Vechile Num</th>
+                                                <th>Expiry Date</th>
+                                                <th>Generate</th>
+                                                <th>Renew</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="divResult"></tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="claim" role="tabpanel" aria-labelledby="contact-tab-8">
+                            <div class="form-group row">
+                                <div class="table-responsive ">
+                                    <table id="claimexp" class="display table table-hover table-striped table-bordered" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Claim Num</th>
+                                                <th>FIR Number</th>
+                                                <th>Quote Amount</th>
+                                                <th>Status</th>
+                                                <th>Update</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="claimdivResult"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    getpolicytrans();
+    getclamlist();
+</script>
